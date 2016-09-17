@@ -1,6 +1,6 @@
-package demo.dal.config.profile;
+package demo.common.config.profile;
 
-import demo.dal.config.ProfileConfig;
+import demo.common.config.ProfileConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
@@ -12,7 +12,7 @@ public class DebugProfile {
 
     public PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
         PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
-        configurer.setLocation(new ClassPathResource("profile.debug.properties"));
+        configurer.setLocation(new ClassPathResource("profile.debug.yaml"));
         configurer.setIgnoreResourceNotFound(true);
         configurer.setIgnoreUnresolvablePlaceholders(true);
         return configurer;

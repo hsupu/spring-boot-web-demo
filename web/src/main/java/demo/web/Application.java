@@ -4,11 +4,9 @@ import demo.bal.BalConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 
-@EnableAutoConfiguration
 @Import(BalConfig.class)
 @ComponentScan(basePackages = "demo.web")
 public class Application {
