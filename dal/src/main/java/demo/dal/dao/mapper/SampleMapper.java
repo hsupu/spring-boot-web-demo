@@ -1,15 +1,20 @@
 package demo.dal.dao.mapper;
 
 import demo.common.model.dto.Sample;
+
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 
 @Mapper
 public interface SampleMapper {
 
-    int insert(Sample sample);
+    Integer insert(Sample sample);
 
     Sample select(int id);
 
-    int selectCount();
+    @Options(useCache = false, flushCache = Options.FlushCachePolicy.TRUE)
+    Sample selectUncached(int id);
+
+    Integer selectCount();
 
 }

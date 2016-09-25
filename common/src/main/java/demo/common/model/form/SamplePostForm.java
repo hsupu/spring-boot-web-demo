@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class SampleAddForm {
+public class SamplePostForm {
 
     @NotNull
     private String name;

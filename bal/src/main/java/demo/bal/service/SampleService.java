@@ -1,9 +1,9 @@
 package demo.bal.service;
 
-import demo.common.model.result.SampleBean;
+import demo.common.model.vm.SampleVM;
 
 public interface SampleService {
 
-    SampleBean get(int id);
+    SampleVM get(int id);
 
 }
